@@ -726,6 +726,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   listenPort: 5005
+  animator: {fileID: 1686514459}
 --- !u!1 &1834674150
 GameObject:
   m_ObjectHideFlags: 0
