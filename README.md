@@ -1,10 +1,18 @@
-<동작인식 파트>
-1. 유니티 화면 가운데에 3D 염소
-2. 행동에 따라 염소 표정 다름(검지로 근처 가면 호, 주먹 쥐면 불호)
-3. 실행방법 : 유니티에서 재생버튼, 아나콘다로 파이썬 코드 실행, 유니티에서 실행화면
+<Anaconda 사용>
+파이썬 버전: 3.10 
+라이브러리 및 라이브러리 버전: requirements.txt(동작인식 및 음성인식 대부분), requirements2.txt(음성인식 키패드 4) 참고
 
-<음성인식 파트>
-1. unity에서 키패드 1 누르기 -> vosk를 이용한 특정 키워드 인식(밥, 안녕, 예쁘다)인식 시 unity에 신호 전달->각 키워드에 맞는 애니메이션 실행
-2. 키패드 2 -> whisper(자유로운 음성인식 4초간 받음), huggingface(간단한 한국어 문맥 파악, 긍정부정파악) -> 긍정 부정 파악에 따른 지정된 대사 출력 및 해당 애니메이션 실행
-3. 키패드 3 -> whisper, huggingface의 로컬 llm을 통한 캐릭터 성격에 따른 대답 생성 -> 소형 llm + 한국어 이슈로 대답 이상한 경우가 더 많음. 구현만 해놓음
-4. 
+<실행방법>
+이론적으로 동시에 시연 가능합니다.
+1. 동작 인식 실행방법
+requirements.txt의 가상환경 라이브러리 다운 후, 가상환경에서 python hand.py 실행, unity 실행 버튼 눌러 게임 창의 결과 확인
+2. 음성 인식 실행방법(키패드 1,2,3)- requirements.txt 가상환경 실행
+2-1. 키패드 1
+vosk 이용한 기능으로 가상환경 외에 vosk 홈페이지에서 vosk-model-small-ko-0.22 다운 필요
+가상환경 실행 후 python voiceDev.py -> unity 실행 -> 키패드 1번을 통해 확인
+2-2 키패드 2, 3
+whisper, Hugging Face 이용한 기능. 가상환경에서 다 깔릴 것이나, python stt_server_whisper_qa.py 최초실행시 hugging Face의 (TinyLlama/TinyLlama-1.1B-Chat-v1.0) LLM 모델이 자동으로 깔릴 것임. 경로설정 주의
+->unity에서 키패드 2, 3을 눌러 기능 수행
+3. 음성 인식 실행방법(키패드 4)-requirements2.txt 가상환경 실행
+Ollama 다운로드 필요. ollama pull llama3.2:3b 사용
+python ollama.py -> unity 실행 -> 숫자 4 키패드 눌러 확인
