@@ -14,6 +14,8 @@ public class VoiceUDPReceiver : MonoBehaviour
     private string latestCommand = null;
     private readonly object lockObj = new object();
 
+    public Animator animator;
+
     void Start()
     {
         udpClient = new UdpClient(listenPort);
@@ -65,17 +67,20 @@ public class VoiceUDPReceiver : MonoBehaviour
         if (cmd == "HELLO")
         {
             Debug.Log("HELLO 명령어 → 캐릭터 인사 애니메이션");
-            // animator.SetTrigger("Hello");
+            if (animator != null)
+                animator.SetTrigger("Hello");
         }
         else if (cmd == "EAT")
         {
             Debug.Log("EAT 명령어 → 캐릭터 식사 애니메이션");
-            // animator.SetTrigger("Eat");
+            if (animator != null)
+                animator.SetTrigger("Food");
         }
         else if (cmd == "CUTE")
         {
-            Debug.Log("CUTE 명령어 → 캐릭터 부끄러움 애니메이션");
-            // animator.SetTrigger("Cute");
+            Debug.Log("CUTE 명령어 → 캐릭터 귀여운 반응 애니메이션");
+            if (animator != null)
+                animator.SetTrigger("Cute");
         }
     }
 
