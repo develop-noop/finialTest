@@ -129,7 +129,7 @@ GameObject:
   m_Component:
   - component: {fileID: 39386057}
   - component: {fileID: 39386059}
-  - component: {fileID: 39386058}
+  - component: {fileID: 39386060}
   m_Layer: 0
   m_Name: GameObject
   m_TagString: Untagged
@@ -152,20 +152,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 626063996}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &39386058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 39386056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77d364cb567915e4696fab7066bfe167, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: '::'
-  qaBubblePrefab: {fileID: 3339944112468028552, guid: 61c52cb4d720fe8458062fd6173a274c, type: 3}
-  bubbleParent: {fileID: 0}
 --- !u!114 &39386059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -180,6 +166,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   pythonIP: 127.0.0.1
   pythonPort: 6000
+--- !u!114 &39386060
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39386056}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67e2c6b4489f23b4b98cabe70785488a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  questionText: {fileID: 974204067}
+  answerText: {fileID: 754814583}
+  animator: {fileID: 1686514459}
 --- !u!1 &128931002
 GameObject:
   m_ObjectHideFlags: 0
@@ -807,7 +808,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -284, y: -264}
+  m_AnchoredPosition: {x: -411, y: -157}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &754814582
@@ -919,7 +920,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 1.0314102, z: -557.6813, w: 0}
+  m_margin: {x: 0, y: 1.0314102, z: -557.6813, w: -55.57158}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -1017,7 +1018,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -282, y: -189}
+  m_AnchoredPosition: {x: -415, y: -96}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &974204066
@@ -1362,7 +1363,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   listenPort: 5005
   animator: {fileID: 1686514459}
-  bubbleManager: {fileID: 39386058}
+  bubbleManager: {fileID: 0}
   questionText: {fileID: 974204067}
   sentimentText: {fileID: 1803830287}
   keywordsText: {fileID: 718888551}
@@ -1402,7 +1403,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -278, y: -112}
+  m_AnchoredPosition: {x: -413, y: -274}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!223 &1803830286
@@ -1448,7 +1449,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: HELLO
+  m_text: "\uAC10\uC815\uD310\uB2E8(\uD0A4\uD328\uB4DC2)"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c9554958381de7c49ac1e835f5cd3ad7, type: 2}
   m_sharedMaterial: {fileID: -7574875618275659074, guid: c9554958381de7c49ac1e835f5cd3ad7, type: 2}
